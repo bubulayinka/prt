@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --green:rgb(136, 223, 211);
+    --nav:rgb(240, 240, 240);
+    --navdeep:rgb(179, 179, 179);
+    --textcol:#333;
+}
+body{
+    font-size: 16px;
+    color: var(--textcol);
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    height: 80px;
+    background: var(--green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2rem;
+    position: relative;
+}
+.logo{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+header nav {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background: var(--nav);
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    clip-path: inset(0 0 100% 0);
+    transition: 0.5s ease-in-out;
+    z-index: 3;
+}
+.shownav{
+    clip-path: inset(0 0 0 0);
+
+}
+header nav ul li{
+    list-style: none;
+    margin: 20px 0px;
+    align-self: center;
+}
+header nav ul li a{
+    padding: 10px 40px;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8rem;
+}
+header nav ul li a:hover{
+    background: var(--navdeep);
+}
+header .menu{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#hero{
+    background: url("images/bg.jpg");
+    height: calc(100vh - 80px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+}
+.herocover{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#hero button,h1,h2,span{
+    position: relative;
+}
+#hero h1{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+#hero span{
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: var(--green);
+}
+#hero h2{
+    font-size: 1.4rem;
+    padding-bottom: 1.5rem;
+}
+button{
+    height: 40px;
+    width: 150px;
+    font-weight: bold;
+    margin: 0  0.2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.5s linear;
+    text-transform: uppercase;
+}
+button:hover{
+    background-color: var(--green);
+    color: white;
+}
+#hero button:nth-child(1){
+    background-color: var(--green);
+    color: white;
+}
+#about{
+    padding: 0 2rem;
+}
+#about h1{
+    text-align: center;
+    margin: 2rem 0;
+}
+#about .abouttext p{
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+#about button{
+    background-color: var(--green);
+    color: white;
+    margin-bottom: 2rem;
+}
+#about button:hover{
+    background-color: var(--green);
+    color: #333;
+}
+#about .aboutimage{
+    width: 100%;
+    height: 20rem;
+    
+}
+#about .aboutimage img{
+    width: 100%;
+    height: 100%;
+}
+#portfolio{
+    padding: 3rem 2rem;
+    background-color: var(--nav);
+}
+#portfolio h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+#portfolio .grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:1.5rem
+}
+#portfolio .griditem{
+    padding: 2rem;
+    height: 20rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -2px -2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#portfolio .griditem:hover{
+    transform: scale(1.02);
+}
+#portfolio .griditem h3{
+    text-align: center;
+    margin: 0;
+    font-size: .9rem;
+}
+#portfolio .griditem img{
+    height: 75%;
+    object-fit: cover;
+    margin: .5rem 0;
+    object-position: center center;
+    width: 100%;
+}
+#portfolio .griditem p{
+    text-align: center;
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.1rem;
+}
+#contact h2{
+    text-align: center;
+    margin: 2rem 0;
+
+}
+form{
+    width: 100%;
+    padding: 2rem;
+}
+form h6{
+    font-size: .9rem;
+    font-weight: normal;
+}
+form input{
+    height: 45px;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: 1px solid var(--textcol);
+    padding: 1rem;
+}
+form textarea{
+    width: 100%;
+    height: 200px;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: 1px solid var(--textcol);
+    padding: 1rem;
+}
+#contact button{
+    background: var(--green);
+    color: white;
+    margin: 0 0 2rem;
+    width: 100%;
+    height: 45px;
+} 
+#contact button:hover{
+    color: #333;
+    background-color: white;
+    border: 1px solid var(--textcol);
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-top: 1px solid var(--textcol);
+    padding: 0 2rem;
+}
+.icons i{
+    color: var(--green);
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+    opacity: .7;
+    transition: all 0.5s ease;
+}
+.icons i:hover{
+    opacity: 1;
+}
