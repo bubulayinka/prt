@@ -131,6 +131,11 @@ button:hover{
 }
 #about{
     padding: 0 2rem;
+
+    
+}
+.aboutcontent{
+
 }
 #about h1{
     text-align: center;
@@ -140,6 +145,7 @@ button:hover{
     margin: 1rem 0;
     font-size: 1rem;
     line-height: 1.5rem;
+    
 }
 #about button{
     background-color: var(--green);
@@ -262,7 +268,7 @@ footer{
     opacity: 1;
 }
 
-@media only screen and (max-width:760px) {
+@media only screen and (min-width:760px) {
     .aboutcontent{
         display: grid;
         grid-template-columns: 1fr 1fr;
