@@ -5,9 +5,9 @@
     
 }
 :root{
-    --green:rgb(136, 223, 211);
+    --green:rgb(78, 155, 145);
     --nav:rgb(240, 240, 240);
-    --navdeep:rgb(179, 179, 179);
+    --navdeep:rgb(213, 250, 245);
     --textcol:#333;
 }
 body{
@@ -32,6 +32,8 @@ header{
 .logo{
     text-transform: uppercase;
     font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
 }
 header nav {
     position: absolute;
@@ -136,7 +138,7 @@ button:hover{
 }
 #about .abouttext p{
     margin: 1rem 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.5rem;
 }
 #about button{
@@ -172,7 +174,7 @@ button:hover{
     grid-gap:1.5rem
 }
 #portfolio .griditem{
-    padding: 2rem;
+    padding: 2rem ;
     height: 20rem;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -2px -2px 2px rgba(0, 0, 0, 0.2);
@@ -197,7 +199,7 @@ button:hover{
 #portfolio .griditem p{
     text-align: center;
     margin: 0;
-    font-size: .8rem;
+    font-size: 1rem;
     line-height: 1.1rem;
 }
 #contact h2{
@@ -210,7 +212,7 @@ form{
     padding: 2rem;
 }
 form h6{
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: normal;
 }
 form input{
@@ -246,7 +248,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    border-top: 1px solid var(--textcol);
+    border-top: 1px solid var(--green);
     padding: 0 2rem;
 }
 .icons i{
@@ -258,4 +260,96 @@ footer{
 }
 .icons i:hover{
     opacity: 1;
+}
+
+@media only screen and (max-width:760px) {
+    .aboutcontent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    #about{
+        padding-bottom: 2rem;
+    }
+    .aboutcontent img{
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px var(--green);
+    }
+    #portfolio .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    header .menu{
+        display: none;
+    }
+    header nav {
+        position: static;
+        clip-path:  inset(0 0 0 0);
+        height: fit-content;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
+        
+    }
+    header nav ul{
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header nav ul li{
+        margin: 0;
+        padding: 0;
+       
+    }
+    header nav ul li a{
+        padding: 10px 40px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+       
+    }
+    .aboutcontent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+    .abouttext{
+        padding-top: 5rem;
+    }
+    .aboutcontent img{
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px var(--green);
+    }
+    #portfolio .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    #portfolio .griditem{
+        height: 40rem;
+        
+    }
+    #portfolio .griditem p{
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.1rem;
+        padding-bottom: 0px;
+        margin-top: 50px;
+    }
+    
+    #contact form{
+        width: 60%;
+        margin: 0 auto;
+    }
+    footer{
+        font-size: 1.5rem;
+    }
 }
