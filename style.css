@@ -338,6 +338,11 @@ footer{
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
     }
+    .griditem h3{
+        font-size: 1.3rem !important;
+        font-weight: lighter;
+        padding-bottom: 20px;
+    }
     
     #portfolio .griditem{
         height: 40rem;
